@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xKHIpX/3ihqmO61pFnXaXC9Pn+Rs7UNJrcCis2VAyEa3JBUQefgQRX0yK7diAbAUIzJzt/YfRv9oJL1iMkdUoQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Uğur_Ceylan\\Desktop\\Görsel Proglamlama FİNAL\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uğur_Ceylan\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\Uğur_Ceylan\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,73 @@
+﻿<Window
+    
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:VisualBasic="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic.Core" x:Class="WpfApp1.MainWindow"
+        FontSize="18" FontFamily="{DynamicResource MaterialDesignFont}" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"  Background="LightGray" 
+        mc:Ignorable="d"
+    
+        Title="20703019 Mustafa Uğur Ceylan" Height="450" Width="800">
+
+    <Grid>
+        <Button x:Name="ad_tus" Content="Ürün Ekle" HorizontalAlignment="Center" Margin="0,78,0,0" VerticalAlignment="Top" Click="ad_tus_Click" Width="204" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="tbEleman" HorizontalAlignment="Left" Margin="43,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="urunad" Cursor="Arrow">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Grid Margin="65,136,81,23">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" x:Name="dgContent" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="-54,0,-72,-16" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="İsim" Width="150" Binding="{Binding C1}"/>
+                    <DataGridTextColumn Header="Kategori" Width="150" Binding="{Binding C2}"/>
+                    <DataGridTextColumn Header="Fiyat" Width="150" Binding="{Binding C3}"/>
+                    <DataGridTemplateColumn Header="Edit" Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="guncelle" Click="Guncelle" Content="Güncelle"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete" Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="sildeneme" Click="Sil22" Content="Sil"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <TextBox x:Name="text_fiyat" HorizontalAlignment="Left" Margin="593,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="urunad" Cursor="Arrow">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Ürün Adı" HorizontalAlignment="Left" Margin="65,12,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ürün Kategorisi" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ürün Fiyatı" HorizontalAlignment="Left" Margin="607,12,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="urun_kategori" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" Width="120" IsEditable="True">
+        </ComboBox>
+        <Label Content="Mustafa Uğur Ceylan " HorizontalAlignment="Left" Margin="43,83,0,0" VerticalAlignment="Top"/>
+        <Label Content="BTS_206 20703019" HorizontalAlignment="Left" Margin="593,83,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
